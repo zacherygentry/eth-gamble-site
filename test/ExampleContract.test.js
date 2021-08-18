@@ -1,6 +1,8 @@
 const { assert, should } = require('chai');
 const Web3 = require('web3');
-let web3 = new Web3('ws://localhost:7545');
+let web3 = new Web3(
+  'wss://rinkeby.infura.io/ws/v3/a9acef6052ae4ac6b98052751a48da9e'
+);
 
 const ExampleContract = artifacts.require('./ExampleContract.sol');
 

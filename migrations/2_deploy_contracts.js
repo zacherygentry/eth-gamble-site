@@ -1,5 +1,5 @@
-const ExampleContract = artifacts.require('ExampleContract');
+const Casino = artifacts.require('Casino');
 
 module.exports = function (deployer) {
-  deployer.deploy(ExampleContract);
+  deployer.deploy(Casino);
 };

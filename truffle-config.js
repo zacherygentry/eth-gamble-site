@@ -1,3 +1,5 @@
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+
 module.exports = {
   networks: {
     development: {
@@ -5,12 +7,16 @@ module.exports = {
       port: 7545,
       network_id: '*', // Match any network id
     },
+    rinkeby: {
+      provider: () => new HDWalletProvider('mnemonic here', 'url here'),
+      network_id: 4, // Rinkeby's id
+    },
   },
   contracts_directory: './contracts/',
   contracts_build_directory: './abis/',
   compilers: {
     solc: {
-      version: '^0.8.2',
+      version: '^0.6.0',
       optimizer: {
         enabled: true,
         runs: 200,
